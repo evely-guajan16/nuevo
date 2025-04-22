@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Simulador de Plurales con C</title>
+  <link rel="shortcut icon" type="image/x-icon" href="resa.ico"/>
+  <style>
+    h1 {
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+
+    .pri {
+      background-color: #e51cce2d;
+      padding: 20px;
+      border-radius: 8px;
+      font-family: 'Lobster', cursive;
+    }
+
+    body {
+      font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+      background: #f2f2f2;
+      padding: 20px;
+    }
+
+    .question-container {
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      margin-bottom: 20px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    .options label {
+      display: block;
+      margin: 5px 0;
+    }
+
+    #result {
+      font-size: 1.2em;
+      font-weight: bold;
+    }
+
+    button {
+      padding: 10px 20px;
+      background: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #45a049;
+    }
+
+    .tom {
+      font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+      font-size: 0.8cm;
+    }
+
+    .button-container {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .next-button {
+      background-color: #4CAF50;
+      color: white;
+      padding: 12px 24px;
+      font-size: 16px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .next-button:hover {
+      background-color: #45a049;
+    }
+
+    .contenedor {
+      text-align: center;
+      margin-top: 30px;
+    }
+
+    .input-field {
+      padding: 12px;
+      width: 250px;
+      font-size: 16px;
+      border: 2px solid #4CAF50;
+      border-radius: 8px;
+      outline: none;
+      transition: border-color 0.3s;
+    }
+
+    .input-field:focus {
+      border-color: #45a049;
+      box-shadow: 0 0 5px rgba(69, 160, 73, 0.5);
+    }
+  </style>
+</head>
+<body>
+
+<div class="pri">
+  <h1><center>Simulador de Preguntas: Uso de la C en los Plurales</center></h1>
+</div>
+
+<br>
+
+<div class="tom">
+  <p><strong>Preguntas sobre el uso correcto de la letra "C" en los plurales ✍️</strong></p>
+</div>
+
+<form id="quizForm">
+  <div class="question-container">
+    <p><strong>41. ¿Cuál es el plural correcto de "pez"?</strong></p>
+    <div class="options">
+      <label><input type="radio" name="q41" value="a"> Pezes</label>
+      <label><input type="radio" name="q41" value="b"> Peces</label>
+      <label><input type="radio" name="q41" value="c"> Pescis</label>
+    </div>
+  </div>
+
+  <div class="question-container">
+    <p><strong>42. ¿Cuál es el plural de "luz"?</strong></p>
+    <div class="options">
+      <label><input type="radio" name="q42" value="a"> Luces</label>
+      <label><input type="radio" name="q42" value="b"> Luzes</label>
+      <label><input type="radio" name="q42" value="c"> Luzces</label>
+    </div>
+  </div>
+
+  <div class="question-container">
+    <p><strong>43. ¿Qué palabra está escrita correctamente en plural?</strong></p>
+    <div class="options">
+      <label><input type="radio" name="q43" value="a"> Narizes</label>
+      <label><input type="radio" name="q43" value="b"> Narices</label>
+      <label><input type="radio" name="q43" value="c"> Naricces</label>
+    </div>
+  </div>
+
+  <div class="question-container">
+    <p><strong>44. ¿Cuál es el plural correcto de "cruz"?</strong></p>
+    <div class="options">
+      <label><input type="radio" name="q44" value="a"> Cruzes</label>
+      <label><input type="radio" name="q44" value="b"> Cruces</label>
+      <label><input type="radio" name="q44" value="c"> Crucis</label>
+    </div>
+  </div>
+
+  <div class="question-container">
+    <p><strong>45. Elige la opción que contiene un plural correcto:</strong></p>
+    <div class="options">
+      <label><input type="radio" name="q45" value="a"> Vozes</label>
+      <label><input type="radio" name="q45" value="b"> Voces</label>
+      <label><input type="radio" name="q45" value="c"> Vozces</label>
+    </div>
+  </div>
+
+  <div class="question-container">
+    <p><strong>46. ¿Qué regla se aplica al hacer plural una palabra que termina en "z"?</strong></p>
+    <div class="options">
+      <label><input type="radio" name="q46" value="a"> Se agrega “z”</label>
+      <label><input type="radio" name="q46" value="b"> Se cambia la “z” por “c” y se agrega “es”</label>
+      <label><input type="radio" name="q46" value="c"> Solo se agrega “es”</label>
+    </div>
+  </div>
+
+  <div class="question-container">
+    <p><strong>47. ¿Qué opción contiene solo plurales correctos?</strong></p>
+    <div class="options">
+      <label><input type="radio" name="q47" value="a"> Peces, luces, voces</label>
+      <label><input type="radio" name="q47" value="b"> Pezes, luces, vozces</label>
+      <label><input type="radio" name="q47" value="c"> Peces, luzes, voces</label>
+    </div>
+  </div>
+
+  <div class="question-container">
+    <p><strong>48. ¿Qué palabra cambia la “z” por “c” al hacerla plural?</strong></p>
+    <div class="options">
+      <label><input type="radio" name="q48" value="a"> Camión</label>
+      <label><input type="radio" name="q48" value="b"> Lapiz</label>
+      <label><input type="radio" name="q48" value="c"> Nariz</label>
+    </div>
+  </div>
+
+  <div class="question-container">
+    <p><strong>49. ¿Cómo se escribe el plural de “actriz”?</strong></p>
+    <div class="options">
+      <label><input type="radio" name="q49" value="a"> Actrizes</label>
+      <label><input type="radio" name="q49" value="b"> Actrices</label>
+      <label><input type="radio" name="q49" value="c"> Actricis</label>
+    </div>
+  </div>
+
+  <div class="question-container">
+    <p><strong>50. ¿Qué opción muestra un error en el uso de la “C”?</strong></p>
+    <div class="options">
+      <label><input type="radio" name="q50" value="a"> Peces</label>
+      <label><input type="radio" name="q50" value="b"> Luces</label>
+      <label><input type="radio" name="q50" value="c"> Lapices</label>
+    </div>
+  </div>
+
+
+
+<p id="result" style="text-align: center; margin-top: 20px;"></p>
+
+<script>
+  function calcularResultado() {
+    const respuestasCorrectas = {
+      q41: "b",
+      q42: "a",
+      q43: "b",
+      q44: "b",
+      q45: "b",
+      q46: "b",
+      q47: "a",
+      q48: "b",
+      q49: "b",
+      q50: "c",
+    };
+
+    let puntos = 0;
+  
+  for (let pregunta in respuestasCorrectas) {
+    const opciones = document.getElementsByName(pregunta);
+    for (let i = 0; i < opciones.length; i++) {
+      if (opciones[i].checked && opciones[i].value === respuestasCorrectas[pregunta]) {
+        puntos++;
+      }
+    }
+  }
+
+  // Guardamos los puntos de esta página
+  localStorage.setItem('resultadoPag5', puntos);
+
+  // Mostramos el resultado en pantalla
+  mostrarResultadoFinal(puntos);
+}
+
+function mostrarResultadoFinal(puntos) {
+  const nombre = localStorage.getItem('nombreEstudiante') || "Estudiante";
+  const totalPreguntas = 10;
+  const porcentaje = (puntos / totalPreguntas) * 100;
+
+  let mensaje = "";
+
+  if (porcentaje >= 90) {
+    mensaje = "¡Excelente rendimiento! 😃";
+  } else if (porcentaje >= 70) {
+    mensaje = "Buen trabajo, tu rendimiento ha sido bueno. 👍";
+  } else if (porcentaje >= 50) {
+    mensaje = "Tu rendimiento es estable, puedes mejorar. 😊";
+  } else {
+    mensaje = "Necesitas reforzar el tema. ¡Sigue practicando! 💪";
+  }
+
+  // Creamos contenedores para mostrar resultados si no existen
+  if (!document.getElementById("resultadoFinal")) {
+    const contenedor = document.createElement("div");
+    contenedor.id = "resultadoFinal";
+    contenedor.innerHTML = `
+      <h2 id="saludoFinal"></h2>
+      <p id="resumenFinal"></p>
+      <p id="mensajeRendimiento"></p>
+    `;
+    document.body.appendChild(contenedor);
+  }
+
+  document.getElementById("saludoFinal").textContent = `Hola, ${nombre}`;
+  document.getElementById("resumenFinal").textContent = `Tuviste un total de ${puntos} de ${totalPreguntas} respuestas correctas.`;
+  document.getElementById("mensajeRendimiento").textContent = mensaje;
+
+  document.getElementById("resultadoFinal").style.display = "block";
+}
+  </script>
+  
+  <div class="button-container">
+    <a href="index.html" class="next-button">Regresar</a>
+  </p>
+  </div>
+
+</body>
+</html>

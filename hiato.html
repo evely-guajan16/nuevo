@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Simulador de Preguntas - El Hiato</title>
+  <link rel="shortcut icon" type="image/x-icon" href="resa.ico"/>
+  <style>
+    h1 {
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+    .pri {
+      background-color: #e51cce2d;
+      padding: 20px;
+      border-radius: 8px;
+      font-family: 'Lobster', cursive;
+    }
+    body {
+      font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+      background: #f2f2f2;
+      padding: 20px;
+    }
+    .question-container {
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      margin-bottom: 20px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    .options label {
+      display: block;
+      margin: 5px 0;
+    }
+    #result {
+      font-size: 1.2em;
+      font-weight: bold;
+    }
+    button {
+      padding: 10px 20px;
+      background: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #45a049;
+    }
+    .contenedor {
+      text-align: center;
+      margin-top: 30px;
+    }
+    .input-field {
+      padding: 12px;
+      width: 250px;
+      font-size: 16px;
+      border: 2px solid #4CAF50;
+      border-radius: 8px;
+      outline: none;
+      transition: border-color 0.3s;
+    }
+    .input-field:focus {
+      border-color: #45a049;
+      box-shadow: 0 0 5px rgba(69, 160, 73, 0.5);
+    }
+    .button-container {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .next-button {
+      background-color: #4CAF50;
+      color: white;
+      padding: 12px 24px;
+      font-size: 16px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      text-decoration: none;
+    }
+
+    .next-button:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+<body>
+  <div class="pri">
+    <h1><center>Simulador de Preguntas sobre el Hiato</center></h1>
+  </div>
+  <br>
+  
+  <div class="tom">
+    <p><strong>Preguntas sobre el tema: "El hiato" 😃</strong></p>
+  </div>
+
+  <form id="quizForm">
+    <div class="question-container">
+      <p><strong>31. ¿Qué es un hiato?</strong></p>
+      <div class="options">
+        <label><input type="radio" name="q31" value="a">Cuando dos vocales se separan en sílabas distintas</label>
+        <label><input type="radio" name="q31" value="b">Cuando dos consonantes se juntan</label>
+        <label><input type="radio" name="q31" value="c">Una letra que suena fuerte</label>
+      </div>
+    </div>
+
+    <div class="question-container">
+      <p><strong>32. ¿Cuál de estas palabras tiene un hiato?</strong></p>
+      <div class="options">
+        <label><input type="radio" name="q32" value="a">cielo</label>
+        <label><input type="radio" name="q32" value="b">poeta</label>
+        <label><input type="radio" name="q32" value="c">cuento</label>
+      </div>
+    </div>
+
+    <div class="question-container">
+      <p><strong>33. ¿Qué ocurre en la palabra "país"?</strong></p>
+      <div class="options">
+        <label><input type="radio" name="q33" value="a">Tiene diptongo</label>
+        <label><input type="radio" name="q33" value="b">Tiene hiato</label>
+        <label><input type="radio" name="q33" value="c">No tiene ninguna de las dos</label>
+      </div>
+    </div>
+
+    <div class="question-container">
+      <p><strong>34. ¿Qué vocales forman un hiato?</strong></p>
+      <div class="options">
+        <label><input type="radio" name="q34" value="a">Una vocal fuerte y una débil sin tilde</label>
+        <label><input type="radio" name="q34" value="b">Dos vocales fuertes o una débil con tilde y una fuerte</label>
+        <label><input type="radio" name="q34" value="c">Dos vocales débiles</label>
+      </div>
+    </div>
+
+    <div class="question-container">
+      <p><strong>35. ¿Qué palabra tiene hiato?</strong></p>
+      <div class="options">
+        <label><input type="radio" name="q35" value="a">caer</label>
+        <label><input type="radio" name="q35" value="b">tierra</label>
+        <label><input type="radio" name="q35" value="c">fuego</label>
+      </div>
+    </div>
+    <div class="question-container">
+        <p><strong>36. ¿Qué ocurre cuando hay un hiato en una palabra?</strong></p>
+        <div class="options">
+          <label><input type="radio" name="q36" value="a">Las vocales se separan en sílabas</label>
+          <label><input type="radio" name="q36" value="b">Las letras desaparecen</label>
+          <label><input type="radio" name="q36" value="c">Las palabras se escriben mal</label>
+        </div>
+      </div>
+      
+      <div class="question-container">
+        <p><strong>37. ¿En cuál de estas palabras hay un hiato?</strong></p>
+        <div class="options">
+          <label><input type="radio" name="q37" value="a">tía</label>
+          <label><input type="radio" name="q37" value="b">cielo</label>
+          <label><input type="radio" name="q37" value="c">piedra</label>
+        </div>
+      </div>
+      
+      <div class="question-container">
+        <p><strong>38. ¿Qué palabra tiene un diptongo y no un hiato?</strong></p>
+        <div class="options">
+          <label><input type="radio" name="q38" value="a">día</label>
+          <label><input type="radio" name="q38" value="b">río</label>
+          <label><input type="radio" name="q38" value="c">cielo</label>
+        </div>
+      </div>
+      
+      <div class="question-container">
+        <p><strong>39. ¿Qué vocal lleva tilde en un hiato?</strong></p>
+        <div class="options">
+          <label><input type="radio" name="q39" value="a">La vocal débil</label>
+          <label><input type="radio" name="q39" value="b">La vocal fuerte</label>
+          <label><input type="radio" name="q39" value="c">Ninguna</label>
+        </div>
+      </div>
+      
+      <div class="question-container">
+        <p><strong>40. ¿Qué palabra contiene un hiato?</strong></p>
+        <div class="options">
+          <label><input type="radio" name="q40" value="a">baúl</label>
+          <label><input type="radio" name="q40" value="b">tierra</label>
+          <label><input type="radio" name="q40" value="c">tarde</label>
+        </div>
+      </div>
+      
+
+  <p id="result"></p>
+
+  <div class="button-container">
+    <a href="usoc.html" class="next-button">Siguiente</a>
+  </div>
+
+  <script>
+    function calcularResultado() {
+      const respuestasCorrectas = {
+        q41: "b",
+      q42: "a",
+      q43: "b",
+      q44: "b",
+      q45: "b",
+      q46: "b",
+      q47: "a",
+      q48: "b",
+      q49: "b",
+      q50: "c",
+      };
+  
+      let puntos = 0;
+  
+      for (let pregunta in respuestasCorrectas) {
+        const opciones = document.getElementsByName(pregunta);
+        for (let i = 0; i < opciones.length; i++) {
+          if (opciones[i].checked && opciones[i].value === respuestasCorrectas[pregunta]) {
+            puntos++;
+          }
+        }
+      }
+  
+      localStorage.setItem('resultadoPag5', puntos);
+      mostrarResultadoFinal(puntos);
+    }
+  
+    function mostrarResultadoFinal(puntos) {
+      const nombre = localStorage.getItem('nombreEstudiante') || "Estudiante";
+      const totalPreguntas = 10;
+      const porcentaje = (puntos / totalPreguntas) * 100;
+  
+      let mensaje = "";
+  
+      if (porcentaje >= 90) {
+        mensaje = "¡Excelente rendimiento! 😃";
+      } else if (porcentaje >= 70) {
+        mensaje = "Buen trabajo, tu rendimiento ha sido bueno. 👍";
+      } else if (porcentaje >= 50) {
+        mensaje = "Tu rendimiento es estable, puedes mejorar. 😊";
+      } else {
+        mensaje = "Necesitas reforzar el tema. ¡Sigue practicando! 💪";
+      }
+  
+      if (!document.getElementById("resultadoFinal")) {
+        const contenedor = document.createElement("div");
+        contenedor.id = "resultadoFinal";
+        contenedor.innerHTML = `
+          <h2 id="saludoFinal"></h2>
+          <p id="resumenFinal"></p>
+          <p id="mensajeRendimiento"></p>
+        `;
+        document.body.appendChild(contenedor);
+      }
+  
+      document.getElementById("saludoFinal").textContent = `Hola, ${nombre}`;
+      document.getElementById("resumenFinal").textContent = `Tuviste un total de ${puntos} de ${totalPreguntas} respuestas correctas.`;
+      document.getElementById("mensajeRendimiento").textContent = mensaje;
+      document.getElementById("resultadoFinal").style.display = "block";
+    }
+  
+    // ⏳ TEMPORIZADOR AUTOMÁTICO (2 minutos)
+    let tiempo = 120;
+  
+    window.onload = () => {
+      // Mostrar temporizador arriba del formulario
+      const timer = document.createElement("p");
+      timer.id = "temporizador";
+      timer.style.fontWeight = "bold";
+      timer.style.color = "red";
+      document.body.insertBefore(timer, document.getElementById("quizForm"));
+  
+      const cuenta = setInterval(() => {
+        const min = Math.floor(tiempo / 60);
+        const seg = tiempo % 60;
+        timer.textContent = `Tiempo restante: ${min}:${seg < 10 ? '0' : ''}${seg}`;
+        tiempo--;
+  
+        if (tiempo < 0) {
+          clearInterval(cuenta);
+          calcularResultado();
+          document.querySelectorAll("input").forEach(e => e.disabled = true);
+          const boton = document.querySelector("button[onclick='calcularResultado()']");
+          if (boton) {
+            boton.disabled = true;
+            boton.style.backgroundColor = "#ccc";
+            boton.style.cursor = "not-allowed";
+          }
+        }
+      }, 1000);
+    };
+  </script>
+  
+  
+</body>
+</html>

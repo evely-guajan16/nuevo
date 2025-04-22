@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>
+        Simulador de Preguntas 4to
+</title>
+<link rel="shortcut icon" type="image/x-icon" href="resa.ico"/>
+  <style>
+    h1{
+font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+    .pri {
+    background-color: #2aed102d;
+    padding: 20px;
+    border-radius: 8px;
+    font-family: 'Lobster', cursive;
+    ;
+}
+
+    body {
+      font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+      background: #f2f2f2;
+      padding: 20px;
+    }
+    .question-container {
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      margin-bottom: 20px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    .options label {
+      display: block;
+      margin: 5px 0;
+    }
+    #result {
+      font-size: 1.2em;
+      font-weight: bold;
+    }
+    button{
+      padding: 10px 20px;
+      background: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #45a049;
+    }
+  zpa{
+align-content: center;
+  }
+  .tom{
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 0.8cm;
+  }
+  .button-container {
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  .next-button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 24px;
+    font-size: 16px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    text-align: center;
+    margin-top: 20px;
+    align-content: center;
+  }
+
+
+  </style>
+</head>
+<body>
+<div class="pri">
+  <h1><center>Simulador de Preguntas de Lengua y Literatura</center></h1>
+</div>
+<div class="tom">
+<p><strong>Preguntas sobre el tema :"Los Pronombre personales"😁</strong></p>
+</div>
+  <form id="quizForm">
+    <div class="question-container">
+      
+        <div class="question-container">
+            <p><strong>11. ¿Qué es un pronombre personal?</strong></p>
+            <div class="options">
+              <label><input type="radio" name="q11" value="a"> Una palabra que señala objetos</label>
+              <label><input type="radio" name="q11" value="b"> Una palabra que sustituye al sustantivo</label>
+              <label><input type="radio" name="q11" value="c"> Una palabra que describe acciones</label>
+            </div>
+          </div>
+          
+          <div class="question-container">
+            <p><strong>12. ¿Cuál de los siguientes es un pronombre personal?</strong></p>
+            <div class="options">
+              <label><input type="radio" name="q12" value="a"> Perro</label>
+              <label><input type="radio" name="q12" value="b"> Él</label>
+              <label><input type="radio" name="q12" value="c"> Correr</label>
+            </div>
+          </div>
+          
+          <div class="question-container">
+            <p><strong>13. ¿Qué pronombre se usa para hablar de ti mismo?</strong></p>
+            <div class="options">
+              <label><input type="radio" name="q13" value="a"> Tú</label>
+              <label><input type="radio" name="q13" value="b"> Yo</label>
+              <label><input type="radio" name="q13" value="c"> Ellos</label>
+            </div>
+          </div>
+          
+          <div class="question-container">
+            <p><strong>14. ¿Cuál es el pronombre que se usa para hablar con otra persona?</strong></p>
+            <div class="options">
+              <label><input type="radio" name="q14" value="a"> Yo</label>
+              <label><input type="radio" name="q14" value="b"> Tú</label>
+              <label><input type="radio" name="q14" value="c"> Él</label>
+            </div>
+          </div>
+          
+          <div class="question-container">
+            <p><strong>15. ¿Cuál de estos pronombres es plural?</strong></p>
+            <div class="options">
+              <label><input type="radio" name="q15" value="a"> Ella</label>
+              <label><input type="radio" name="q15" value="b"> Nosotros</label>
+              <label><input type="radio" name="q15" value="c"> Yo</label>
+            </div>
+          </div>
+          
+          <div class="question-container">
+            <p><strong>16. ¿Qué pronombre usarías para hablar de un grupo de mujeres?</strong></p>
+            <div class="options">
+              <label><input type="radio" name="q16" value="a"> Ellas</label>
+              <label><input type="radio" name="q16" value="b"> Ellos</label>
+              <label><input type="radio" name="q16" value="c"> Nosotros</label>
+            </div>
+          </div>
+          
+          <div class="question-container">
+            <p><strong>17. ¿Qué pronombre usarías para hablar de varias personas incluyéndote a ti?</strong></p>
+            <div class="options">
+              <label><input type="radio" name="q17" value="a"> Ustedes</label>
+              <label><input type="radio" name="q17" value="b"> Nosotros</label>
+              <label><input type="radio" name="q17" value="c"> Ellos</label>
+            </div>
+          </div>
+          
+          <div class="question-container">
+            <p><strong>18. ¿Qué pronombre corresponde a tercera persona del singular?</strong></p>
+            <div class="options">
+              <label><input type="radio" name="q18" value="a"> Tú</label>
+              <label><input type="radio" name="q18" value="b"> Él</label>
+              <label><input type="radio" name="q18" value="c"> Nosotros</label>
+            </div>
+          </div>
+          <div class="question-container">
+            <p><strong>19. ¿Que pronombres usarias ara hablar con varias personas?</strong></p>
+            <div class="options">
+              <label><input type="radio" name="q19" value="a"> Ustedes</label>
+              <label><input type="radio" name="q19" value="b"> Yo</label>
+              <label><input type="radio" name="q19" value="c"> El</label>
+            </div>
+          </div>
+          <div class="question-container">
+            <p><strong>20. ¿Cual pronombre usarias para hablar de una niña?</strong></p>
+            <div class="options">
+              <label><input type="radio" name="q20" value="a"> El</label>
+              <label><input type="radio" name="q20" value="b"> Ella</label>
+              <label><input type="radio" name="q20" value="c"> Nosotros</label>
+            </div>
+          </div>
+          
+  </form>
+
+ 
+  <p id="result">
+    <div class="button-container">
+      <a href="poesia.html" class="next-button">Siguiente</a>
+    </p>
+    </div>
+    <script>
+      function calcularResultado() {
+        const respuestasCorrectas = {
+          q11: "a",
+      q12: "b",
+      q13: "b",
+      q14: "b",
+      q15: "b",
+      q16: "a",
+      q17: "b",
+      q18: "b",
+      q19: "a",
+      q20: "b"
+        };
+    
+        let puntos = 0;
+    
+        for (let pregunta in respuestasCorrectas) {
+          const opciones = document.getElementsByName(pregunta);
+          for (let i = 0; i < opciones.length; i++) {
+            if (opciones[i].checked && opciones[i].value === respuestasCorrectas[pregunta]) {
+              puntos++;
+            }
+          }
+        }
+    
+        localStorage.setItem('resultadoPag5', puntos);
+        mostrarResultadoFinal(puntos);
+      }
+    
+      function mostrarResultadoFinal(puntos) {
+        const nombre = localStorage.getItem('nombreEstudiante') || "Estudiante";
+        const totalPreguntas = 10;
+        const porcentaje = (puntos / totalPreguntas) * 100;
+    
+        let mensaje = "";
+    
+        if (porcentaje >= 90) {
+          mensaje = "¡Excelente rendimiento! 😃";
+        } else if (porcentaje >= 70) {
+          mensaje = "Buen trabajo, tu rendimiento ha sido bueno. 👍";
+        } else if (porcentaje >= 50) {
+          mensaje = "Tu rendimiento es estable, puedes mejorar. 😊";
+        } else {
+          mensaje = "Necesitas reforzar el tema. ¡Sigue practicando! 💪";
+        }
+    
+        if (!document.getElementById("resultadoFinal")) {
+          const contenedor = document.createElement("div");
+          contenedor.id = "resultadoFinal";
+          contenedor.innerHTML = `
+            <h2 id="saludoFinal"></h2>
+            <p id="resumenFinal"></p>
+            <p id="mensajeRendimiento"></p>
+          `;
+          document.body.appendChild(contenedor);
+        }
+    
+        document.getElementById("saludoFinal").textContent = `Hola, ${nombre}`;
+        document.getElementById("resumenFinal").textContent = `Tuviste un total de ${puntos} de ${totalPreguntas} respuestas correctas.`;
+        document.getElementById("mensajeRendimiento").textContent = mensaje;
+        document.getElementById("resultadoFinal").style.display = "block";
+      }
+    
+      // ⏳ TEMPORIZADOR AUTOMÁTICO (2 minutos)
+      let tiempo = 120;
+    
+      window.onload = () => {
+        // Mostrar temporizador arriba del formulario
+        const timer = document.createElement("p");
+        timer.id = "temporizador";
+        timer.style.fontWeight = "bold";
+        timer.style.color = "red";
+        document.body.insertBefore(timer, document.getElementById("quizForm"));
+    
+        const cuenta = setInterval(() => {
+          const min = Math.floor(tiempo / 60);
+          const seg = tiempo % 60;
+          timer.textContent = `Tiempo restante: ${min}:${seg < 10 ? '0' : ''}${seg}`;
+          tiempo--;
+    
+          if (tiempo < 0) {
+            clearInterval(cuenta);
+            calcularResultado();
+            document.querySelectorAll("input").forEach(e => e.disabled = true);
+            const boton = document.querySelector("button[onclick='calcularResultado()']");
+            if (boton) {
+              boton.disabled = true;
+              boton.style.backgroundColor = "#ccc";
+              boton.style.cursor = "not-allowed";
+            }
+          }
+        }, 1000);
+      };
+    </script>
+    
+
+</body>
+</html>
